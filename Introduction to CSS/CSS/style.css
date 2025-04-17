@@ -1,0 +1,35 @@
+*{
+    color: red;
+}
+
+/* Learn About Specificity */
+/* CSS Combinators */
+/* Pseudo Classes */
+/* Serif font for (Display) and San Serif font for (Printing) and MonoSpace[Fira code, JetBrains] for (Coding ) , hand writing, display font difference */
+/* Web safe fonts */
+
+/* For bangla fonts it's lipighor.com  */
+/*  Google fonts
+    100 -thin
+    400 - regular
+*/
+
+/* Fall Back fonts first one is not work then second one will work based on your system */
+
+/* @font-face for add manually downloaded font */
+@font-face {
+    font-family: 'Sweet';
+    src: url(./fonts/Li\ Sweet\ Shreyam\ Unicode.ttf);
+}
+
+@font-face {
+    font-family: 'Sutonny';
+    src: url(./fonts/SutonnyMJ\ Regular.ttf);
+}
+
+.bangla{
+    font-family: Sweet;
+    font-weight: lighter;
+}
+
+/* Must have to unicode bangla font */
