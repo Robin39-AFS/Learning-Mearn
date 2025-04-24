@@ -1,49 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Position</title>
-    <style>
-        div{
-            font-family: Arial, Helvetica, sans-serif;
-            color: #fff;
-            font-size: 50px;
-            width: 300px;
-            height: 300px;
-        }
-        .box-1{
-            background-color: tomato;
-            position: absolute;
-        }
-        .box-2{
-            background-color: gray;
-        }
-        .box-3{
-            background-color: seagreen;
-        }
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <style>
+      body {
+        height: 2000px;
+      }
+      div {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 50px;
+        width: 300px;
+        height: 300px;
+      }
+      .box-1 {
+        background-color: tomato;
+        position: absolute;
+        right: 0;
+      }
+      .box-2 {
+        background-color: gray;
+      }
+      .box-3 {
+        background-color: seagreen;
+      }
+      .parent {
+        height: 700px;
+        width: 700px;
+        border: 3px solid black;
+        position: relative;
+      }
+      /* a {
+        display: inline-block;
+        padding: 20px 0;
+        background-color: tomato;
+        color: #fff;
+        text-decoration: none;
+        width: 200px;
+        height: 30px;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 15px;
+      }
+      a:hover {
+        background-color: rgb(254, 51, 15);
+      } */
+      nav{
+        background-color: aqua;
+        color: #fff;
+        height: 50px;
+        position: sticky;
+        top: 0;
+      }
+      header{
+        height: 600px;
+        border: 2px solid green;
+      }
     </style>
     <!-- when we type position: absolute some feature unlock
           1. Elements are not in normal document flow.
           2. Feature those unlock are top, left, bottom, right, z-index 
           3. There one question arise that. Is box parent position relative?
             - Yes
-            - No
+            - No (Initial Content block )
     -->
-</head>
-<body>
-
-    <div class="box-1">1</div>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contacts</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+    <div class="parent">
+      <div class="box-1">1</div>
+    </div>
     <div class="box-2">2</div>
     <div class="box-3">3</div>
     <!-- 
-        1. Absolute Position
-        2. Fixed Position
+        1. Absolute Position 
+        2. Fixed Position (View port matter)
         3. Absolute + Relative Position
-        4. Relative Position
-        5. Sticky Position
+        4. Relative Position (Parent relative means it's hook with child) there parent is relative and child is absolute we can just use relative that will we can use that left right top bottom. this is safe to use and z-index and don't break document flow.
+        5. Sticky Position (Better control and it's depend on it's parent and must use top value)
     -->
-    
-</body>
+
+    <a href="#">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+  </body>
 </html>
