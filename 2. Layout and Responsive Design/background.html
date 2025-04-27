@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background</title>
+    <style>
+        .box{
+            width: 2000px;
+            height: 2000px;
+            border: 3px solid tomato;
+            margin: 0 auto;
+            background-image: url(./bg.jpg); /* by default it's repeat image  */
+            background-repeat: no-repeat; /* this use for not repeating, with this we can control x and y axis repeat */
+            background-size: 200px; /* first one is for width and second one is height */
+            /* contain stretch as long long width come and cover is as long as height come and there is high chance that cover some image will hide */
+            background-position: center; /* we can use bottom right, right top // we can use px value manually */
+            background-attachment: fixed; /* we use to fixed and it's look good. we can do this with javascript that is parallax scrolling */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
